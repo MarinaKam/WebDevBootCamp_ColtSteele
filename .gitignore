@@ -61,10 +61,3 @@ typings/
 
 
 .idea/
-README.md
-app.js
-bin/
-package.json
-public/
-routes/
-views/
