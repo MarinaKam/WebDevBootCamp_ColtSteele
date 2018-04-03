@@ -1,0 +1,21 @@
+<% include header %>
+
+<h1>Dogs Page!</h1>
+<% dog.forEach(function (dog) { %>
+
+    <li>
+        <strong><%= dog.name %></strong> - <%= dog.breed %>
+    </li>
+<% })%>
+
+<a href="/"> <- Home Back</a>
+
+<form action="/create_dogs" method="post">
+
+    <input type="text" placeholder="name">
+    <input type="text" placeholder="breed">
+    <input type="submit">
+
+</form>
+
+<% include footer %>

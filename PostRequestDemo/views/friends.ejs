@@ -1,0 +1,17 @@
+<% include header %>
+<h1>Friends List Goes Here!</h1>
+
+<% friendName.forEach(name => { %>
+
+    <ul>
+        <li>I have a friend - <em><%= name %></em></li>
+    </ul>
+
+<% }) %>
+
+<form action="/addfriend" method="post">
+    <input type="text" name="newFriend" placeholder="Name">
+    <button>I make a new friend!</button>
+</form>
+
+<% include footer %>
