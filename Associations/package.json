@@ -1,0 +1,15 @@
+{
+  "name": "Associations",
+  "version": "1.0.0",
+  "description": "## Intro to Associations * Define associations * Discuss one:one, one:many, and many:many relationships",
+  "main": "embed.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.0.15"
+  }
+}
