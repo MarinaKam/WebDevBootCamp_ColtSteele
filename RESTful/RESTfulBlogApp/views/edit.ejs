@@ -1,0 +1,14 @@
+<% include partials/header.ejs %>
+<section class="section-new">
+    <h1>Edit <%= blogs.title %></h1>
+    <form class="section-new__form" action="/blogs/<%= blogs._id %>?_method=PUT" method="post">
+        <label>Title</label>
+        <input type="text" name="blog[title]" value="<%= blogs.title %>">
+        <label>Image url</label>
+        <input type="text" name="blog[image]" value="<%= blogs.image %>">
+        <label>Blog Content</label>
+        <textarea rows="8" name="blog[body]"><%= blogs.body %></textarea>
+        <button>Submit</button>
+    </form>
+</section>
+<% include partials/footer.ejs %>

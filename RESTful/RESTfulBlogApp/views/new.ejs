@@ -1,0 +1,14 @@
+<% include partials/header.ejs %>
+<section class="section-new">
+    <h1>New Blog</h1>
+    <form class="section-new__form" action="/blogs" method="post">
+        <label>Title</label>
+        <input type="text" name="blog[title]" placeholder="Title">
+        <label>Image url</label>
+        <input type="text" name="blog[image]" placeholder="Image url">
+        <label>Blog Content</label>
+        <textarea rows="8" name="blog[body]"></textarea>
+        <button>Submit</button>
+    </form>
+</section>
+<% include partials/footer.ejs %>

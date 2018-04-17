@@ -1,0 +1,19 @@
+<% include partials/header.ejs %>
+<section class="article-section">
+    <% blogs.forEach(blog => { %>
+    <article class="article-section__item">
+        <div class="article-section__cnt image">
+            <img src="<%= blog.image %>" alt="">
+        </div>
+        <div class="article-section__cnt text">
+            <h1><%= blog.title %></h1>
+            <p class="article-section__date"><%= blog.created.toDateString() %></p>
+            <p><%- blog.body.substring(0, 175) %> ...</p>
+            <a href="/blogs/<%= blog._id %>" class="article-section__link">Read More &rsaquo;&rsaquo;</a>
+        </div>
+    </article>
+    <% }); %>
+</section>
+
+
+<% include partials/footer.ejs %>

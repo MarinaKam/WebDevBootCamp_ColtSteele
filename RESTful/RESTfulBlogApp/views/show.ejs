@@ -1,0 +1,22 @@
+<% include partials/header.ejs %>
+
+<section class="section-new show-page">
+    <article class="showe-page__article">
+        <div class="article-section__cnt image">
+            <img src="<%= blogs.image %>" alt="">
+            <p class="article-section__date"><%= blogs.created.toDateString() %></p>
+        </div>
+        <div class="article-section__cnt text">
+            <h1><%= blogs.title %></h1>
+            <p><%- blogs.body %></p>
+        </div>
+    </article>
+    <div class="btn-group">
+        <a class="edit" href="/blogs/<%= blogs._id %>/edit">Edit</a>
+        <form class="section-new__form delete" action="/blogs/<%= blogs._id %>?_method=DELETE" method="post">
+            <button>Delete</button>
+        </form>
+    </div>
+    <a href="/blogs">&lsaquo;&lsaquo; Go Back</a>
+</section>
+<% include partials/footer.ejs %>
