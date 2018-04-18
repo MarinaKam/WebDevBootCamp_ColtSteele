@@ -8,13 +8,14 @@ const bodyParser = require('body-parser'),
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/views')));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 const todoRoutes  = require('./routes/todos');
 
 app.get('/', function (req, res) {
-    res.send('Hello From The Root Route!');
+    res.sendFile('index.html');
 });
 
 app.use('/api/todos', todoRoutes);
