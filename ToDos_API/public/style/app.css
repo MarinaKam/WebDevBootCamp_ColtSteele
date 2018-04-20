@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+
+/*Custom styles */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    /*color: #34495e;*/
+    background: #ecf0f1;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    color: #00B7FF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+h1 {
+    font-weight: 200;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+header,
+section,
+footer {
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: rgba(44, 62, 80, 1);
+    flex: 0 0 auto;
+    color: rgba(250,250,250, .6);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: #607d8b;
+    width: 100px;
+    margin: 3px 0 0;
+    align-self: center;
+}
+
+@media screen and (min-width: 920px) {
+    header,
+    section,
+    footer {
+        padding: 10px 12%;
+    }
+}
+/*Custom styles END*/
+
+header h1 {
+    font-size: 40px;
+    font-weight: 300;
+    margin: 30px auto 0;
+    color: #2c3e50;
+}
+header h1 span {
+    font-weight: 700;
+}
+header h2 {
+    color: #bdc3c7;
+    font-weight:300;
+}
+
+/*****************************FORM STYLES*****************************/
+
+.form {
+    width: 90%;
+    margin: 30px auto 20px;
+}
+
+#todoInput {
+    width: 98.5%;
+    height: 50px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #34495e;
+    outline: none;
+    font: 300 24px 'Ubuntu', sans-serif;
+    padding: 0 0 0 10px;
+    color: #34495e;
+}
+
+/*****************************LIST STYLES*****************************/
+.list {
+    width: 80%;
+    margin: 10px auto;
+}
+.task {
+    width: 96.5%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    padding: 0 20px;
+    color: #34495e;
+    transition: all .3s ease;
+}
+.task:hover {
+    background: rgba(0, 0, 0, .02);
+    cursor: pointer;
+}
+
+.task:hover span{
+    opacity: 1;
+}
+
+.done {
+    text-decoration: line-through;
+    color: #bdc3c7;
+}
+
+li span {
+    float: right;
+    color: #c0392b;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+li span:hover {
+    color: #e74c3c
+}
+
+
+@media screen and (min-width: 450px) {
+
+}
+
+@media screen and (min-width: 760px) {
+    header h1 {
+        font-size: 64px;
+        margin: 80px 0 25px;
+    }
+
+    .form {
+        width: 60%;
+        margin: 30px auto 20px;
+    }
+
+    #todoInput {
+        height: 60px;
+        font: 300 28px 'Ubuntu', sans-serif;
+    }
+
+    .list {
+        width: 57%;
+    }
+}
+
+@media screen and (min-width: 920px) {
+
+}
+
+@media screen and (min-width: 1025px) {
+
+}
