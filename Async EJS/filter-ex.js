@@ -82,3 +82,21 @@ function doubleOddNumbers(arr) {
 
 console.log(doubleOddNumbers([1,2,3,4,5]));
 console.log(doubleOddNumbers([4,4,4,4,4]));
+
+let arrPet = [
+    {first: 'Elie', last:"Schoppik", pet: 'Dog'},
+    {first: 'Tim', last:"Garcia", pet: 'Cat'},
+    {first: 'Matt', last:"Lane", pet: 'Dog'},
+    {first: 'Colt', last:"Steele", pet: 'Cat'}
+    ];
+
+function filteredPet(arr) {
+    return arr.map(item => {
+        return(item['pet']);
+    })
+        .filter((item, pos, self) => {
+            return self.indexOf(item) === pos;
+        });
+}
+
+console.log(filteredPet(arrPet));
