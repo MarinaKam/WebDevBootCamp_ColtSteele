@@ -118,24 +118,6 @@ function removeItem(item) {
         });
 }
 
-// function updateItem(item) {
-//     let updateUrl = '/api/items/' + item.data('id');
-//     let isDone = !item.data('completed');
-//     let updateData = {completed: isDone};
-//     $.ajax({
-//         method: 'PUT',
-//         url: updateUrl,
-//         data: updateData
-//     })
-//         .then(function(updatedTodo){
-//             // item.toggleClass("done");
-//             item.data('completed', isDone);
-//         })
-//         .catch(err => {
-//             console.log(err);
-//         });
-// }
-
 function creatCategBtn(items) {
     let arrCategor = filteredCategory(items);
     arrCategor.forEach(el => {
