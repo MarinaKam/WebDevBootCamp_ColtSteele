@@ -102,3 +102,5 @@ class Motorcycle extends Vehicle {
 
 let vehicle = new Vehicle("Tractor", "John Deere", 1999);
 console.log(vehicle.toString()); // 'The make, model, and year are Tractor John Deere 1999'
+console.log(vehicle.model);
+console.log(vehicle.make);

@@ -113,9 +113,7 @@ function removeItem(item) {
             item.remove();
             // window.location = '/blogs';
         })
-        .catch(err => {
-            console.log(err);
-        });
+        .catch(err => console.log(err));
 }
 
 function creatCategBtn(items) {
@@ -145,12 +143,12 @@ function filterSelection(c) {
     x = document.getElementsByClassName("column");
     if (c === "all") c = "";
     for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        removeClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
     }
 }
 
-function w3AddClass(element, name) {
+function addClass(element, name) {
     let i, arr1, arr2;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
@@ -159,7 +157,7 @@ function w3AddClass(element, name) {
     }
 }
 
-function w3RemoveClass(element, name) {
+function removeClass(element, name) {
     let i, arr1, arr2;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");

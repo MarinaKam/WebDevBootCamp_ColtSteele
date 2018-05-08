@@ -1,0 +1,30 @@
+<% include ../partials/header.ejs %>
+<section class="article-page">
+    <div class="header">
+        <h1><%= campground.name %></h1>
+        <hr class="first">
+        <hr class="second">
+        <hr class="third">
+    </div>
+</section>
+<section class="article-section">
+    <img src="<%= campground.image %>" alt="">
+    <p>
+        <%= campground.description %>
+    </p>
+    <br>
+    <h4>Comments:</h4>
+    <br>
+    <% campground.comments.forEach(comment => { %>
+        <p><em><%= comment.author %></em> - <%= comment.text %></p>
+    <% }); %>
+    
+    <p class="header-btn">
+        <a class="header-btn__link" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
+    </p>
+</section>
+<section>
+    <a href="/campgrounds">&lsaquo;&lsaquo; Go Back</a>
+</section>
+
+<% include ../partials/footer.ejs %>

@@ -9,3 +9,11 @@ chmod a+x mongod
 mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"
 
 ````
+
+
+````
+use ......(name-db)
+switched to db ....name-db
+show collections
+db.name-db.find()
+````

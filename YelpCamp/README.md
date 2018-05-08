@@ -48,3 +48,21 @@ CREATE   /dogs      POST       Add new dog to DB
 SHOW     /dogs/:id  GET        Shows info about one dog
 
 ````
+
+## Refactor Mongoose Code
+* Create a models directory
+* Use module.exports
+* Require everything correctly
+
+## Add seeds file
+* Add a seeds.js file
+* Run the seeds.js file every time the server starts
+
+## Add the Comment model
+* Make our errors go away!
+* Display comments on campground show page
+
+## Comment New/Create
+* Discuss nested routes
+* Add the comment new and create routs
+* Add the new comment form
