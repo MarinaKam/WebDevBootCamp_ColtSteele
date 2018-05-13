@@ -1,0 +1,42 @@
+<% include ../partials/header.ejs %>
+<section class="article-section">
+    <aside class="aside">
+        <h3>Yelp Camp</h3>
+        <button class="btn active">Info 1</button>
+        <button class="btn">Info 2</button>
+        <button class="btn">Info 3</button>
+    </aside>
+    <article class="article">
+        <div class="article__info">
+            <img src="<%= campground.image %>" alt="">
+            <div class="article-price">
+                <h1><%= campground.name %></h1>
+                <h4>$9.00/night</h4>
+            </div>
+            <p><%= campground.description %></p>
+            <p><em>Submitted By <%= campground.author.username %></em></p>
+        </div>
+        <div class="article__comment">
+            <p class="header-btn">
+                <a class="header-btn__link" href="/campgrounds/<%= campground._id %>/comments/new">Leave a Review</a>
+            </p>
+            <hr>
+            <% campground.comments.forEach(comment => { %>
+                <div class="article__comment-info">
+                    <h4><%= comment.author.username %></h4>
+                    <span>10 days ago</span>
+                </div>
+                <p class="article__comment-text">
+                    <%= comment.text %>
+                </p>
+                <!--<p><em><%= comment.author %></em> - <%= comment.text %></p>-->
+            <% }); %>
+
+        </div>
+    </article>
+</section>
+<section>
+    <a href="/campgrounds">&lsaquo;&lsaquo; Go Back</a>
+</section>
+
+<% include ../partials/footer.ejs %>

@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended: true}));
 // const itemRoutes  = require('./routes/items');
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.send('Hi everyone!');
 });
 
 // app.get('/blogs', (req, res) => {

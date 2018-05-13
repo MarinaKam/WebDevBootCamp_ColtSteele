@@ -1,0 +1,21 @@
+{
+  "name": "Authentication",
+  "version": "1.0.0",
+  "description": "* What tools are we using?     * Passport     * Passport Local     * Passport Local Mongoose * Walk through auth flow * Discuss sessions     * Express-Session",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Marie Kam",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.18",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.0"
+  }
+}
