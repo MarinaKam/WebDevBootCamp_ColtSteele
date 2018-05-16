@@ -101,7 +101,41 @@ CREATE  campgrounds/:id/comments      POST
 * Associate users and comments
 * Save author's name to a comment automatically
 
-## Users + Canmpgrounds
+## Users + Campgrounds
 * Prevent an unauthenticated user from creating a campground
 * Save username + id to newly created campground
+
+# Editing Campgrounds
+* Add Method-Override
+* Add Edit route for Campgrounds
+* Add Link to Edit Page
+* Add Update Route
+* Fix $set problem
+
+# Deleting Campground
+* Add Destroy Route
+* Add Delete Button
+
+# Authorization Pt.-1
+* User can only edit his/her campgrounds
+* User can only delete his/her campgrounds
+* Hide/show edit and delete buttons
+
+# Editing Comments
+* Add Edit route for Comments
+* Add Edit Button
+* Add Update Route
+
+Campground edit route /campgrounds/:id/edit
+Comment edit route /campgrounds/:id/comments/:comment_id/edit
+
+# Deleting Comments
+* Add Destroy Route
+* Add Delete Button
+
+# Authorization Pt.-2: Comments
+* User can only edit his/her comments
+* User can only delete his/her comments
+* Hide/show edit and delete buttons
+* Refactor Middleware
 
