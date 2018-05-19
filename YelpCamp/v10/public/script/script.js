@@ -7,9 +7,6 @@ $(document).ready(function() {
         $menulink.toggleClass('active');
         $menu.toggleClass('active');
         return false;
-        // alert('he');
     });
 
-    ($('.grid').length <= 3) ? $('.section-grid').css({'justify-content': 'flex-start'}) :
-        $('.section-grid').css({'justify-content': 'space-between'});
 });

@@ -191,7 +191,7 @@ hr {
 .section-grid {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-grow: 20;
     align-content: flex-start;
 }
@@ -476,7 +476,7 @@ hr {
     }
 
     .grid {
-        flex-basis: 45%;
+        flex-basis: 46%;
     }
 
     .section-new__form {
@@ -494,10 +494,15 @@ hr {
         margin-top: 0;
     }
 }
+@media screen and (min-width: 520px) {
+    .grid {
+        flex-basis: 46.2%;
+    }
+}
 
 @media screen and (min-width: 760px) {
     .grid {
-        flex-basis: 45%;
+        flex-basis: 46.9%;
     }
     .header__nav {
         /*display: block;*/
@@ -563,7 +568,7 @@ hr {
     }
 
     .section-grid {
-        padding: 0 11.5%;
+        padding: 0 11% 0 11.5%;
     }
 
     .grid {
@@ -581,6 +586,7 @@ hr {
         width: 30%;
     }
 }
+
 
 /*Menu Sandwich*/
 

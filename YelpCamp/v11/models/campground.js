@@ -26,7 +26,10 @@ let campgroundSchema = new Schema({
             ref: "Comment"
         }
     ],
-    created: {type: Date, default: Date.now}
+    created: {type: Date, default: Date.now},
+    location: String,
+    lat: Number,
+    lng: Number
 });
 
 module.exports = mongoose.model('Campground', campgroundSchema);

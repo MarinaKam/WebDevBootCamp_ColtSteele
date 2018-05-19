@@ -758,3 +758,8 @@ nav[role=navigation] li a {
     }
 }
 
+#map {
+    margin-top: 20px;
+    height: 400px;
+    width: 100%;
+}

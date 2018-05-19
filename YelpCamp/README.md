@@ -105,23 +105,23 @@ CREATE  campgrounds/:id/comments      POST
 * Prevent an unauthenticated user from creating a campground
 * Save username + id to newly created campground
 
-# Editing Campgrounds
+## Editing Campgrounds
 * Add Method-Override
 * Add Edit route for Campgrounds
 * Add Link to Edit Page
 * Add Update Route
 * Fix $set problem
 
-# Deleting Campground
+## Deleting Campground
 * Add Destroy Route
 * Add Delete Button
 
-# Authorization Pt.-1
+## Authorization Pt.-1
 * User can only edit his/her campgrounds
 * User can only delete his/her campgrounds
 * Hide/show edit and delete buttons
 
-# Editing Comments
+## Editing Comments
 * Add Edit route for Comments
 * Add Edit Button
 * Add Update Route
@@ -129,13 +129,33 @@ CREATE  campgrounds/:id/comments      POST
 Campground edit route /campgrounds/:id/edit
 Comment edit route /campgrounds/:id/comments/:comment_id/edit
 
-# Deleting Comments
+## Deleting Comments
 * Add Destroy Route
 * Add Delete Button
 
-# Authorization Pt.-2: Comments
+## Authorization Pt.-2: Comments
 * User can only edit his/her comments
 * User can only delete his/her comments
 * Hide/show edit and delete buttons
 * Refactor Middleware
 
+## Adding in Flash
+* Demo working version
+* Install and configure connect-flash
+* Add alerts to header
+
+## Adding a location feature to our application, using the Google Maps API
+slides.com - [http://slides.com/nax3t/yelpcamp-refactor-google-maps#/19]
+* Sign up for a google developer account
+* Get Google Maps API Key
+* Add key to application as ENV variable
+* Add Google Maps scripts to your application
+* Display the campground location in show.ejs
+* Update Campground Model
+* Update campground routes with node-geocode
+
+## Adding a "time since.." feature to our application, using Moment JS
+* Install moment js
+* Require moment and add it to app.locals
+* Update campground and comment models
+* Use moment in your show.ejs file

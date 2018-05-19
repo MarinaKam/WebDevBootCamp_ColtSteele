@@ -2,7 +2,8 @@ const express   = require('express'),
     router      = express.Router(),
     Campground  = require('../models/campground'),
     User        = require('../models/user'),
-    passport    = require('passport');
+    passport    = require('passport'),
+    middleware  = require('../middleware');
 
 router.get('/', (req, res) => res.render('landing'));
 
@@ -36,10 +37,5 @@ router.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/campgrounds');
 });
-
-    function isLoggedIn(req, res, next) {
-        if (req.isAuthenticated()) return next();
-        res.redirect('/login');
-    }
 
 module.exports = router;

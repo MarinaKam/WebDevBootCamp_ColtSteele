@@ -41,14 +41,14 @@ router.get('/:comment_id/edit', checkOwnerComment, (req, res) => {
     });
 });
 
-//UPDATE CAMPGROUND ROUTE
+//UPDATE COMMENT ROUTE
 router.put('/:comment_id', checkOwnerComment, (req, res) => {
     Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment,  (err, updatedComment) => {
         err ? res.redirect('back') : res.redirect(`/campgrounds/${req.params.id}`);
     });
 });
 
-//DESTROY CAMPGROUND ROUTE
+//DESTROY COMMENT ROUTE
 router.delete('/:comment_id', checkOwnerComment, (req, res) => {
     Comment.findByIdAndRemove(req.params.comment_id,  (err, foundComment) => {
         err ? res.redirect('back') : res.redirect(`/campgrounds/${req.params.id}`);
