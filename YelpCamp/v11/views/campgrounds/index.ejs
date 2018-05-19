@@ -1,0 +1,30 @@
+<% include ../partials/header.ejs %>
+<section>
+    <div class="header">
+        <h1>Welcome To YelpCamp!</h1>
+        <p>View our hand-picked campgrounds from all over the world</p>
+        <hr class="first">
+        <hr class="second">
+        <hr class="third">
+        <p class="header-btn">
+            <a class="header-btn__link" href="/campgrounds/new">Add New Campground</a>
+        </p>
+    </div>
+</section>
+<section class="section-grid">
+    <% campgrounds.forEach(campground => { %>
+    <div class="grid">
+            <p class="grid__item" style="background-image: url(<%= campground.image %>)"></p>
+            <h4><%= campground.name %></h4>
+            <p class="header-btn">
+                <a href="/campgrounds/<%= campground._id %>" class="header-btn__link">More Info</a>
+            </p>
+    </div>
+    <% }); %>
+
+</section>
+<section>
+    <a href="/">&lsaquo;&lsaquo; Go Back</a>
+</section>
+
+<% include ../partials/footer.ejs %>

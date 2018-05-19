@@ -1,0 +1,18 @@
+<% include partials/header.ejs%>
+<section>
+    <div class="header">
+        <h1>Log In Page</h1>
+        <hr class="first">
+        <hr class="second">
+        <hr class="third">
+    </div>
+</section>
+<section class="register-form">
+    <form class="section-new__form" action="/login" method="POST">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <button>Submit</button>
+        <a href="/campgrounds">&lsaquo;&lsaquo; Go Back</a>
+    </form>
+</section>
+<% include partials/footer.ejs%>

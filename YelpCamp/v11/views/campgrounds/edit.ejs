@@ -1,0 +1,14 @@
+<% include ../partials/header.ejs %>
+<section class="section-new">
+    <h1>Edit <%= campground.name %></h1>
+
+    <form class="section-new__form" action="/campgrounds/<%= campground._id %>?_method=PUT" method="post">
+        <input type="text" name="campground[name]" value="<%= campground.name %>">
+        <input type="number" name="campground[price]" value="<%= campground.price %>" min="0.01" step="0.01">
+        <input type="text" name="campground[image]" value="<%= campground.image %>">
+        <input type="text" name="campground[description]" value="<%= campground.description %>">
+        <button>Edite!</button>
+        <a href="/campgrounds/<%= campground._id %>">&lsaquo;&lsaquo; Go Back</a>
+    </form>
+</section>
+<% include ../partials/footer.ejs %>
