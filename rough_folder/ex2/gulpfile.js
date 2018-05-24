@@ -26,17 +26,13 @@ const reload        = browserSync.reload;
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 const combine       = streamCombiner.obj;
 const path   = {
-    views: '/',
     src: 'assets',
     dist: 'public'
 };
 
 const config = {
-    server: {
-        baseDir: path.views
-    },
-    tunnel: true,
-    host: 'localhost',
+    proxy: "http://localhost:3000",
+    files: "views/**/*.ejs",
     port: 7000,
     logPrefix: "Frontend_MarieKam"
 };
@@ -132,6 +128,8 @@ gulp.task('nodemon', cb => {
     });
 });
 
-gulp.task('server', ['nodemon'], () => browserSync(config));
-gulp.task('dev', ['build', 'server', 'watch']);
 gulp.task('default', ['build', 'server', 'watch']);
+
+gulp.task('server', ['nodemon'], () => browserSync.init(null, config));
+
+gulp.task('dev', ['build', 'server', 'watch']);
