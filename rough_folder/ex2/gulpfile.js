@@ -117,7 +117,7 @@ gulp.task('watch', () => {
     gulp.watch(`${path.src}/img/*.{png,jpg,svg}`, ['images']);
     gulp.watch(`${path.src}/fonts/*.*`, ['fonts']);
     gulp.watch(`${path.src}/lib/*.*`, ['libs']);
-    gulp.watch(["public/**/*.ejs", "public/**/*.json", "public/**/*.md"], () => reload());
+    gulp.watch("views/**/*.ejs", () => reload());
 });
 
 gulp.task('nodemon', cb => {
