@@ -129,22 +129,22 @@ CREATE  campgrounds/:id/comments      POST
 Campground edit route /campgrounds/:id/edit
 Comment edit route /campgrounds/:id/comments/:comment_id/edit
 
-## Deleting Comments
+## Deleting Comments -v10
 * Add Destroy Route
 * Add Delete Button
 
-## Authorization Pt.-2: Comments
+## Authorization Pt.-2: Comments -v10
 * User can only edit his/her comments
 * User can only delete his/her comments
 * Hide/show edit and delete buttons
 * Refactor Middleware
 
-## Adding in Flash
+## Adding in Flash -v11
 * Demo working version
 * Install and configure connect-flash
 * Add alerts to header
 
-## Adding a location feature to our application, using the Google Maps API
+## Adding a location feature to our application, using the Google Maps API -v11
 slides.com - [http://slides.com/nax3t/yelpcamp-refactor-google-maps#/19]
 * Sign up for a google developer account
 * Get Google Maps API Key
@@ -154,7 +154,7 @@ slides.com - [http://slides.com/nax3t/yelpcamp-refactor-google-maps#/19]
 * Update Campground Model
 * Update campground routes with node-geocode
 
-## Adding a "time since.." feature to our application, using Moment JS
+## Adding a "time since.." feature to our application, using Moment JS -v11Final
 * Install moment js
 * Require moment and add it to app.locals
 * Update campground and comment models

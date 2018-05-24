@@ -104,3 +104,16 @@ let vehicle = new Vehicle("Tractor", "John Deere", 1999);
 console.log(vehicle.toString()); // 'The make, model, and year are Tractor John Deere 1999'
 console.log(vehicle.model);
 console.log(vehicle.make);
+
+var car = new Car('Kia', 'Sorento', 2010);
+console.log('================Car===================');
+console.log(car.toString());
+// class Person {
+//     constructor (firstName, lastName) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+// }
+//
+// var elie = new Person('Elie', 'Schoppik');
+//

@@ -1,6 +1,6 @@
 const express      = require('express'),
     app          = express(),
-    port         = 3000,
+    port         = process.env.PORT || 3000,
     path         = require('path');
 
 //APP CONFIG (view engine setup)
@@ -27,10 +27,7 @@ app.get('/blogs/new', (req, res) => {
 
 app.use('/api/items', itemRoutes);
 
-app.get('*', (req, res) => {
-    res.send('Sorry page not found... YOU ARE THE STAR!!!');
-});
+app.get('*', (req, res) => res.send('Sorry page not found... YOU ARE THE STAR!!!'));
 
-app.listen(port, function () {
-    console.log(`Example app listening on port ${port}!`);
-});
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+

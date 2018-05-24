@@ -17,11 +17,14 @@ const campgroundRoutes    = require('./routes/campgrounds'),
     commentRoutes         = require('./routes/comments'),
     authRoutes            = require('./routes/index');
 
-let port = 3000;
+let port = process.env.PORT || 3000;
+const url = process.env.DATABASEURL || 'mongodb://localhost/YelpCamp_app';
 
 //seedDB();//seed the DB
 mongoose.set('debug', true);
-mongoose.connect("mongodb://localhost/YelpCamp_app");
+mongoose.connect(url);
+// mongoose.connect("mongodb://YelpCamp_Admin:yelpcamp@ds129560.mlab.com:29560/yelpcamp_app");
+// mongodb://YelpCamp_Admin:yelpcamp@ds129560.mlab.com:29560/yelpcamp_app
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

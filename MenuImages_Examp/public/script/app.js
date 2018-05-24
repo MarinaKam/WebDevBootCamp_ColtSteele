@@ -34,7 +34,7 @@ $(document).ready(function(){
     }
 
     $('.header-btn').on('click', '.menu-link', () => {
-        $(".header-nav").width("320px");
+        $(".header-nav").width("100%");
     });
 
     $('.header-nav').on('click', '.closebtn', () => {

@@ -12,7 +12,7 @@ body {
     overflow: -moz-scrollbars-none;
 }
 body::-webkit-scrollbar {
-    display: none;  // Safari and Chrome
+    display: none;
 }
 
 .wrapper {
@@ -77,7 +77,7 @@ header {
     color: #34495e;
     padding: 10px;
     flex: 0 0 auto;
-    z-index: 1;
+    z-index: 10;
 }
 
 header a {
@@ -124,7 +124,7 @@ footer {
     color: #fff;
     padding: 10px 80px;
     flex: 0 0 auto;
-    z-index: 1;
+    z-index: 10;
 }
 
 h1 {
@@ -582,7 +582,7 @@ hr {
     }
 
     .section-grid {
-        padding: 0 11% 0 11.5%;
+        padding: 0 10% 0 11.5%;
     }
 
     .grid {
@@ -607,14 +607,26 @@ hr {
 
 .landing-header {
     z-index: 1;
-    position: relative;
+    /*position: relative;*/
+}
+
+.landing-header:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .2);
+
 }
 
 .landing-header .header {
     margin: auto;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: transparent;
     opacity: 0;
     animation: slideTop 1.5s cubic-bezier(.65, 2, .03, .32) forwards 1.5s;
+    z-index: 10;
 }
 
 @keyframes slideTop {
@@ -624,21 +636,25 @@ hr {
     }
 
     100% {
-        transform: translate(0, -50%);
+        transform: translate(0, 0);
         opacity: 1;
     }
 }
 
 .landing-header .header hr {
     background-color: #fff;
+    height: 3px;
 }
 
 .landing-header h1 {
     color: #fff;
+    font-weight: bold;
+    font-size: 46px;
+    margin-bottom: 20px;
 }
 
 .landing a {
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .slideshow {
