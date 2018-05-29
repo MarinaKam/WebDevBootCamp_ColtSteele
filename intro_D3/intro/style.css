@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700');
+@import "intro/normalize.css";
+
+body {
+    color: #34495e;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+section {
+    padding: 10px 12%;
+}
+
+ol {
+    padding: 5px 18px;
+}
+
+li {
+    list-style: circle;
+}
+
+p {
+    margin-bottom: 10px;
+}
+

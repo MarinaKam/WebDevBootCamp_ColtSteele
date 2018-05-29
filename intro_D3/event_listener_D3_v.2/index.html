@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<section>
+    <h1>My notes.</h1>
+    <div id="notes">
+        <p class="note">
+            Need to go to the store.
+        </p>
+        <p class="note">
+            What's the name of that movie with that guy?
+        </p>
+        <p class="note">
+            Here's another note.
+        </p>
+    </div>
+    <p class="preview hide"></p>
+    <form id="new-note">
+        <input type="text">
+        <button type="submit">Add Note</button>
+        <button class="remove" type="button">Remove All Notes</button>
+        <button class="lucky" type="button">I'm filling lucky</button>
+    </form>
+</section>
+<script src="//d3js.org/d3.v5.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
