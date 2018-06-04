@@ -41,7 +41,7 @@ gulp.task('clean', () => del([`${path.dist}/**/*.**`, 'manifest']));
 
 gulp.task('styles', () => {
     combine(
-        gulp.src(`${path.src}/**/main.scss`),
+        gulp.src(`${path.src}/**/**/*.scss`),
         changed(`${path.dist}/style/`),
         _if(isDevelopment, sourcemaps.init()),
         scss(),
@@ -54,6 +54,7 @@ gulp.task('styles', () => {
         gulp.dest(`${path.dist}/style/`),
         _if(!isDevelopment, rev.manifest('css.json')),
         _if(!isDevelopment, gulp.dest('manifest')),
+        reload({stream: true}),
         filesize()
         ).on('error', notify.onError(err => console.log(err.message)));
 });
@@ -62,7 +63,7 @@ gulp.task('scripts', () => {
     combine(
         gulp.src(`${path.src}/js/*.js`),
         changed(`${path.dist}/js/`),
-        babel({presets: ['es2015']}),
+        babel({presets: ['env']}),
         jshint(),
         jshint.reporter('default'),
         _if(isDevelopment, sourcemaps.init()),
@@ -108,7 +109,7 @@ gulp.task('libs', () => {
 gulp.task('build', ['clean', 'styles', 'scripts', 'images', 'fonts', 'libs']);
 
 gulp.task('watch', () => {
-    gulp.watch(`${path.src}/**/*.scss`, ['styles']);
+    gulp.watch(`${path.src}/**/**/*.scss`, ['styles']);
     gulp.watch(`${path.src}/**/*.js`, ['scripts']);
     gulp.watch(`${path.src}/img/*.{png,jpg,svg}`, ['images']);
     gulp.watch(`${path.src}/fonts/*.*`, ['fonts']);

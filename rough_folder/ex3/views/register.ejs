@@ -2,17 +2,17 @@
 <section>
     <div class="header">
         <h1>Register Page</h1>
-        <hr class="first">
-        <hr class="second">
-        <hr class="third">
     </div>
 </section>
 <section class="register-form">
     <form class="section-new__form" action="/register" method="POST">
-        <input type="text" name="username" placeholder="username">
-        <input type="password" name="password" placeholder="password">
+        <input type="text" name="username" placeholder="Your Name">
+        <input type="text" name="surname" placeholder="Your Surname">
+        <label for="adminCode">If you're an admin, enter the secret code:</label>
+        <input id="adminCode" type="text" name="adminCode" placeholder="Admin Code">
+        <input type="password" name="password" placeholder="Your Password">
         <button>Submit</button>
-        <a href="/campgrounds">&lsaquo;&lsaquo; Go Back</a>
+        <a href="/">&lsaquo;&lsaquo; Go Back</a>
     </form>
 </section>
 <% include partials/footer.ejs%>

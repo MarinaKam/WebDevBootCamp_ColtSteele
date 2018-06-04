@@ -1,11 +1,12 @@
 {
-  "name": "Providence Free Theme",
+  "name": "ProvidenceTheme",
   "version": "1.0.0",
   "description": "Providence Free Theme - node, express, ejs, mongodb, mongoose, passport.auth, gulp, scss",
   "main": "app.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "Marie Kam <kammarvic@gmail.com>",

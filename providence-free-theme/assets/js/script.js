@@ -1,46 +1,45 @@
-document.addEventListener('scroll', function(e) {
-    //scroll top
-    if(document.scrollingElement.scrollTop > 20) {
-        d3.select('.header-nav').classed('active', true);
-    } else {
-        d3.select('.header-nav').classed('active', false);
-    }
-    (document.scrollingElement.scrollTop >= 450) ? d3.select('.top-btn').classed('top-active', true) : d3.select('.top-btn').classed('top-active', false);
+document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('scroll', function(e) {
+        //scroll top
+        if(document.scrollingElement.scrollTop > 20) {
+            d3.select('.header-nav').classed('active', true);
+        } else {
+            d3.select('.header-nav').classed('active', false);
+        }
+        (document.scrollingElement.scrollTop >= 450) ? d3.select('.top-btn').classed('top-active', true) : d3.select('.top-btn').classed('top-active', false);
 
-    d3.select('.top-btn').on('click', () => scrollTo(document.body, 0, 1250));
+        d3.select('.top-btn').on('click', () => scrollTo(document.body, 0, 1250));
 
-    function scrollTo(element, to, duration) {
-        let start = element.scrollTop,
-            change = to - start,
-            currentTime = 0,
-            increment = 20;
+        function scrollTo(element, to, duration) {
+            let start = element.scrollTop,
+                change = to - start,
+                currentTime = 0,
+                increment = 20;
 
-        let animateScroll = function(){
-            currentTime += increment;
-            let val = Math.easeInOutQuad(currentTime, start, change, duration);
-            element.scrollTop = val;
-            if(currentTime < duration) {
-                setTimeout(animateScroll, increment);
-            }
-        };
-        animateScroll();
-    }
+            let animateScroll = function(){
+                currentTime += increment;
+                let val = Math.easeInOutQuad(currentTime, start, change, duration);
+                element.scrollTop = val;
+                if(currentTime < duration) {
+                    setTimeout(animateScroll, increment);
+                }
+            };
+            animateScroll();
+        }
 
 //t = current time
 //b = start value
 //c = change in value
 //d = duration
-    Math.easeInOutQuad = function (t, b, c, d) {
-        t /= d/2;
-        if (t < 1) return c/2*t*t + b;
-        t--;
-        return -c/2 * (t*(t-2) - 1) + b;
-    };
+        Math.easeInOutQuad = function (t, b, c, d) {
+            t /= d/2;
+            if (t < 1) return c/2*t*t + b;
+            t--;
+            return -c/2 * (t*(t-2) - 1) + b;
+        };
 
 
-});
-
-document.addEventListener('DOMContentLoaded', () => {
+    });
 
     d3.select('body').append('div')
         .attr('class', 'top-btn')

@@ -39,7 +39,7 @@
 }
 
 .header-cnt__img {
-  @include position(absolute, $top: 560px);
+  @include position(absolute, $top: 570px);
   width: 250px;
 }
 
@@ -76,8 +76,15 @@
   opacity: 0;
 }
 
-/* Media Queries - Small screen / tablet  479px*/
+
 @media screen and (min-width: 500px) {
+  .header-cnt__img {
+    @include position(absolute, $top: 440px);
+  }
+}
+
+/* Media Queries - Small screen / tablet  760px*/
+@media screen and (min-width: $screen-sm-min) {
   .header-cnt {
     & .popup-vimeo {
       display: block;
@@ -89,10 +96,6 @@
       }
     }
   }
-}
-
-/* Media Queries - Small screen / tablet  760px*/
-@media screen and (min-width: $screen-sm-min) {
   .header-cnt__cnt {
     padding: 0 30px;
   }

@@ -4,8 +4,7 @@
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-base:                                              		Hind, sans-serif !default; // Hind font family
-$font-family-sl-icons:                                              	Simple-Line-Icons !default; // Simple Line Icons third-party icons plugin
+$font-family-base:                                              		Raleway, sans-serif !default;
 
 // Colors
 $color-base:                                                            #17bed2 !default;
@@ -27,10 +26,10 @@ $color-sky-light:                                                      	#fafafa 
 $screen-xs-min:                											480px !default;
 
 // Small screen / tablet
-$screen-sm-min:                											768px !default;
+$screen-sm-min:                											760px !default;
 
 // Medium screen / desktop
-$screen-md-min:                											992px !default;
+$screen-md-min:                											920px !default;
 
 // Large screen / wide desktop
 $screen-lg-min:                											1200px !default;

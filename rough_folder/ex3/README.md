@@ -2,7 +2,7 @@
 
 start - gulp
 
-#### to add admin rights:
+### Added Admin Rights:
 - in the views files:
 app show page and comment show page for button visibility
 ```
@@ -24,3 +24,4 @@ in the checkUserComment:
         }
 ```
 
+### Added User Profiles
