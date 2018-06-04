@@ -13,6 +13,7 @@ const express             = require('express'),
     path                  = require('path');
 
 let port = process.env.PORT || 3000;
+// mongodb://Admin:authapp1@ds247290.mlab.com:47290/auth-simple-app
 
 const authRoutes          = require('./routes/index');
 const url = process.env.DATABASEURL || 'mongodb://localhost/auth-app';

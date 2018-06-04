@@ -91,7 +91,6 @@ Hidden Nav
 .hid-nav__header-logo {
   margin-top: 15px;
   margin-bottom: 15px;
-  //pointer-events: none;
 }
 
 .open-btn {
@@ -99,6 +98,8 @@ Hidden Nav
   margin-right: 35px;
   font-size: 18px;
   cursor: pointer;
+  padding: 0 10px;
+  z-index: 1;
 }
 
 .cloth-btn {
