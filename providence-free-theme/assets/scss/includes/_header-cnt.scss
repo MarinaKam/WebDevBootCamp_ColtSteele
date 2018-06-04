@@ -1,0 +1,124 @@
+/*=========================================
+  HEADER-CNT STYLES
+=========================================*/
+.header-cnt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  text-align: center;
+  background: url("img/banner_background.jpg") top left no-repeat;
+  padding: 80px 10px 430px;
+  overflow: hidden;
+  font-family: $font-family-lato;
+  & a {
+    font-family: $font-family-lato;
+    color: $bgc-hidden-nav;
+    &:hover {
+      color: rgba($bgc-hidden-nav, .5);
+    }
+  }
+  & .popup-vimeo {
+    display: none;
+  }
+}
+
+.header-cnt__title {
+  color: $bgc-hidden-nav;
+  font: 400 52px/72px $font-family-varela;
+  margin-bottom: 0;
+}
+
+.header-cnt__cnt {
+  margin-top: 10px;
+  color: $color-text;
+  font: 400 16px/28px $font-family-lato;
+  padding: 0 10px;
+}
+
+.header-cnt__img {
+  @include position(absolute, $top: 560px);
+  width: 250px;
+}
+
+/*=========================================
+ Magnific pop-up settings
+=========================================*/
+
+/**
+ * Simple fade transition,
+ */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+/* Media Queries - Small screen / tablet  479px*/
+@media screen and (min-width: 500px) {
+  .header-cnt {
+    & .popup-vimeo {
+      display: block;
+      position: relative;
+      margin: 40px auto;
+      & .fa-play {
+        font-size: $default-font-size;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+/* Media Queries - Small screen / tablet  760px*/
+@media screen and (min-width: $screen-sm-min) {
+  .header-cnt__cnt {
+    padding: 0 30px;
+  }
+  .header-cnt__img {
+    @include position(absolute, $top: 460px);
+  }
+}
+
+/* Media Queries 920px */
+@media screen and (min-width: $screen-md-min) {
+  .header-cnt {
+    padding: 170px 20% 460px;
+  }
+
+  .header-cnt__title {
+    font-size: 62px;
+  }
+
+  .header-cnt__cnt {
+    font-size: 20px;
+    padding: 0 44px;
+  }
+
+  .header-cnt__img {
+    @include position(absolute, $top: 560px);
+    width: 350px;
+  }
+
+}

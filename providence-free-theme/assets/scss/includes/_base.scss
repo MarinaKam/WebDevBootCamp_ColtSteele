@@ -1,0 +1,236 @@
+/*------------------------------------------------------------------
+  	[The "base.scss" contains basic default element styles
+  		(colors, typography, margins & padding).]
+------------------------------------------------------------------*/
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  font-family: $font-family-base;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+  font-size: $default-font-size + 2;
+  color: $color-heading;
+}
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.loaded-page {
+  opacity: 0;
+  animation: fadein 1s forwards;
+}
+
+ul, li, ol {
+  list-style: none;
+}
+
+em,
+li,
+li a {
+  @include font($size: 16px, $weight: 400, $family: $font-family-base);
+  color: $color-heading;
+}
+
+a {
+  display: block;
+  @include font($family: $font-family-base);
+  color: $color-link;
+  outline: none;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+    color: $btn-blue;
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include font($size: 40px, $weight: 400, $family: $font-family-base);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+header,
+section {
+  padding: 0 10px;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 0 0 auto;
+  background-color: $color-white;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  overflow-x: hidden;
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 auto;
+  color: rgba(250,250,250, .6);
+  padding: 10px;
+  & p {
+    margin: 0;
+    padding: 0;
+    color: $color-text;
+
+    & span {
+      font-family: $font-family-name;
+      font-size: 30px;
+      //font-weight: bold;
+      color: $btn-blue;
+    }
+  }
+
+  & hr {
+    clear: both;
+    box-shadow: 0 0 1px rgba(38,39,45,.5);
+    opacity: .1;
+    width: 100%;
+  }
+}
+
+
+p {
+  @include font($size: 14px, $weight: 400, $family: $font-family-base);
+  color: $color-subtitle;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+::selection {
+  background: transparent;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  color: $color-white;
+  text-shadow: none;
+}
+
+:active,
+:focus {
+  outline: none;
+}
+
+.user-name {
+  text-transform: capitalize;
+}
+
+h2.admin {
+  color: $color-white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.alert {
+  position: absolute;
+  top: 80px;
+  left: 10%;
+  right: 10%;
+  padding: 0 10px;
+}
+
+.alert-msg {
+  position: relative;
+  margin-top: 110px;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 10px;
+  &:after {
+    position: absolute;
+    content: 'x';
+    color: inherit;
+    font-size: 20px;
+    top: 13px;
+    right: 20px;
+  }
+}
+.success-msg {
+  background-color: #e5f9e7;
+  color: #1ebc30;
+  -webkit-box-shadow: 0 0 0 1px #1ebc30 inset,0 0 0 0 transparent;
+  box-shadow: 0 0 0 1px #1ebc30 inset,0 0 0 0 transparent;
+}
+
+.danger-msg {
+  background-color: #ffe8e6;
+  color: #db2828;
+  -webkit-box-shadow: 0 0 0 1px #db2828 inset,0 0 0 0 transparent;
+  box-shadow: 0 0 0 1px #db2828 inset,0 0 0 0 transparent;
+}
+
+.secret-section-cnt {
+  padding-top: 100px;
+}
+
+
+@media (min-width: $screen-md-min) {
+  header,
+  section {
+    padding: 0px 10%;
+  }
+
+  footer {
+    padding: 10px 10% 15px;
+  }
+
+}
+
+.top-btn {
+  //border: 1px solid $btn-blue;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: rgba($color-white, .3);
+  box-shadow: 0 0 2px rgba($btn-blue, 0.5);
+  opacity: 0;
+  cursor: pointer;
+  & .fa-arrow-up {
+    font-size: 30px;
+    color: rgba($btn-blue, .7);
+    margin-top: 9px;
+    margin-left: 2px;
+  }
+}
+
+.top-active {
+  animation: fadein 1s forwards 1s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

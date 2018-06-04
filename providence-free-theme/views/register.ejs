@@ -1,0 +1,13 @@
+<% include partials/header.ejs%>
+<section class="register-form">
+    <h2>Register Page</h2>
+    <form class="section-new__form" action="/register" method="POST">
+        <input type="text" name="username" placeholder="Your Name">
+        <input type="password" name="password" placeholder="Your Password">
+        <label for="adminCode">If you're an admin, enter the secret code:</label>
+        <input id="adminCode" type="text" name="adminCode" placeholder="Admin Code">
+        <button class="btn-green">Submit</button>
+        <a class="link-back" href="/">&lsaquo;&lsaquo; Go Back</a>
+    </form>
+</section>
+<% include partials/footer.ejs%>

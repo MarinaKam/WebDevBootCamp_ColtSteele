@@ -1,0 +1,54 @@
+@import "normalize";
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+
+/*----------------------------------------------------------------------
+
+	MASTER STYLESHEET
+
+	Project:        ''
+	Version:        1.0
+	Author:         MarieKam
+	Primary use:    ''
+	Email:			kammarvic@gmail.com
+	Follow:
+	Like: 			https://www.facebook.com/marina.v.kam
+	Website:
+
+-----------------------------------------------------------------------*/
+
+// Custom
+// =================================================================
+
+@import 'includes/mixins'; // Mixins
+@import 'includes/variables'; // Variables
+
+//==========================================================
+//Default Custom Styles
+//==========================================================
+@import "includes/base";
+
+//==========================================================
+//Custom Styles
+//==========================================================
+@import "includes/header";
+@import "includes/header-cnt";
+@import "includes/section";
+@import "includes/section-info";
+@import "includes/carousel";
+@import "includes/switcher";
+@import "includes/subscribe";
+
+//==========================================================
+//Register & Login Styles
+//==========================================================
+@import "includes/register";
+@import "includes/login";
+
+//==========================================================
+//Btn Styles
+//==========================================================
+@import "includes/btn";

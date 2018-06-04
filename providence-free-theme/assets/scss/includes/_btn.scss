@@ -1,0 +1,123 @@
+//==========================================================
+//Btn Styles
+//==========================================================
+
+.btn {
+  @include button;
+  @include button-size($default-font-size + 2, 400, $padding-btn-norm);
+}
+
+.btn-blue {
+  @include button-color($color-white, $color-white, $btn-blue, darken($btn-blue, 15%), 1px, $btn-blue, darken($btn-blue, 15%));
+  transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+}
+
+//==========================================================
+//Popup Btn Styles
+//==========================================================
+
+.btn-grey {
+  @include button;
+  @include  button-size($default-font-size + 2, 400, $padding-btn-lg);
+  border: 1px solid rgba($bgc-hidden-nav, .1);
+  border-radius: 30px;
+  transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+  &:hover {
+    border-color: rgba($bgc-hidden-nav, .3);
+  }
+}
+
+.btn-green {
+  @include button;
+  @include button-color($color-white, $color-white, $btn-green, darken($btn-green, 15%), 1px, $btn-green, darken($btn-green, 15%));
+  & .fa {
+    margin-left: 10px;
+  }
+  font-family: $font-family-lato;
+  transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+}
+
+.btn-blue__xs {
+  & .fa {
+    margin-left: 10px;
+  }
+  font-family: $font-family-lato;
+}
+
+.btn-grey__xs {
+  color: $bgc-hidden-nav;
+  font-family: $font-family-lato;
+  margin-left: 10px;
+  @include button;
+  @include  button-size($default-font-size + 2, 400, $padding-btn-norm);
+  padding-bottom: 11px;
+  border: 1px solid rgba($bgc-hidden-nav, .1);
+  border-radius: 30px;
+  &:hover {
+    border-color: rgba($bgc-hidden-nav, .3);
+    color: rgba($bgc-hidden-nav, .5);
+  }
+  transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+}
+
+.btn-input {
+  @include button;
+  @include  button-size($default-font-size + 2, 400, 15px 15px);
+  border: 1px solid rgba($bgc-hidden-nav, .1);
+  width: 320px;
+  box-sizing: border-box;
+  transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+}
+
+.btn-dark {
+  margin: 0 10px;
+  position: relative;
+  @include button-color($color-white, $color-white, #131315, lighten(#131315, 15%), 1px, #131315, lighten(#131315, 15%));
+  border-radius: 30px;
+  padding: 8px 35px 9px;
+  font-family: $font-family-lato;
+  & span {
+    font-size: 12px;
+    line-height: 22px;
+    margin-left: 32px;
+  }
+  & b {
+    font-size: 23px;
+    line-height: 18px;
+    margin-left: 30px;
+  }
+
+  & .fab {
+    position: absolute;
+    font-size: 32px;
+    top: 12px;
+    left: 25px;
+  }
+
+  transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+}
+
+// Extra small screen / phone 479px
+@media screen and (min-width: $screen-xs-min - 1) {
+  .btn-input {
+    width: 470px;
+  }
+}
+
+/* Media Queries - Small screen / tablet  760px*/
+@media screen and (min-width: $screen-sm-min) {
+  .btn-blue__xs {
+    & .fa {
+      margin-left: 30px;
+    }
+  }
+
+  .btn-grey__xs {
+    margin-left: 20px;
+  }
+
+  .btn-input {
+    width: 502px;
+  }
+
+}

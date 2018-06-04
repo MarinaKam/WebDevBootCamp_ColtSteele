@@ -1,0 +1,15 @@
+<% include partials/header.ejs%>
+<section>
+    <div class="header">
+        <h1>Log In Page</h1>
+    </div>
+</section>
+<section class="register-form">
+    <form class="section-new__form" action="/login" method="POST">
+        <input type="text" name="username" placeholder="username" required autofocus>
+        <input type="password" name="password" placeholder="password">
+        <button>Submit</button>
+        <a href="/">&lsaquo;&lsaquo; Go Back</a>
+    </form>
+</section>
+<% include partials/footer.ejs%>

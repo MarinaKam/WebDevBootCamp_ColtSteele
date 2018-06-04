@@ -1,0 +1,17 @@
+{
+  "name": "ex2",
+  "description": "gulp-expressjs-nodemon-browser-sync",
+  "main": "gulpfile.js",
+  "authors": [
+    "Marie Kam"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/MarinaKam/WebDevBootCamp_ColtSteele",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

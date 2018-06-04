@@ -1,0 +1,210 @@
+/*=========================================
+  SWITCHER STYLES
+=========================================*/
+.switcher {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $main-bgc;
+  & ul {
+    padding: 0;
+  }
+
+}
+
+.switcher-toggles {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 258px;
+  height: 50px;
+  border: 1px solid rgba($arrow-color, .15);
+  border-radius: 30px;
+  margin-bottom: 80px;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 124px;
+    height: 42px;
+    box-shadow: 2.5px 4.33px 20px 0px rgba(61, 61, 62, 0.059);
+    background-color: white;
+    border-radius: 30px;
+    top: 4px;
+    left: 4px;
+    transition: left 0.7s cubic-bezier(0.545, 0, 0.05, 1);
+  }
+  &.switched:after {
+    transition: left 0.7s cubic-bezier(0.545, 0, 0.05, 1);
+    left: 130px;
+  }
+}
+
+[class*='switcher__'] {
+  color: rgba($arrow-color, .4);
+  padding: 13px 10px;
+  cursor: pointer;
+  z-index: 111;
+  transition: color 0.7s cubic-bezier(0.545, 0, 0.05, 1);
+  &.switched {
+    color: rgba($arrow-color, 1);
+  }
+}
+
+.switcher-block {
+  flex: 0 1 100%;
+
+  & .info {
+    color: $color-text;
+    font: 400 20px/28px $font-family-lato;
+    font-size: 14px;
+    display: inline-flex;
+    padding: 0;
+    line-height: 1;
+  }
+  & .switcher-link {
+    color: $btn-blue;
+    margin-left: 8px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.first-block {
+  & h2 {
+    text-align: left;
+    line-height: 45px;
+    font-size: 30px;
+  }
+  & h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  & p {
+    margin-top: 40px;
+    font-size: 20px;
+    color: $color-text;
+    padding-right: 17%;
+  }
+}
+
+.second-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex: 0 1 100%;
+}
+
+[class*='switcher-block__'] {
+  width: 300px;
+  height: 550px;
+  transition: all .5s cubic-bezier(0, 0, 0.58, 1);
+  & h3 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+  & .btn-grey {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+  & h4 {
+    padding: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: initial;
+    margin-bottom: 47px;
+  }
+
+  & .btn {
+    width: 212px;
+  }
+
+  & .btn-blue:hover {
+    background-color: transparent;
+    color: $btn-blue;
+  }
+}
+
+.switcher-block__starter.switcher-active,
+.switcher-block__pro.switcher-active {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 28px 50px rgba(92, 95, 101, 0.2);
+  transform: scale(1);
+  z-index: 1;
+}
+
+.switcher-block__pro,
+.switcher-block__starter {
+  transform: scale(.92);
+  background-color: #ebebed;
+  border-radius: 10px;
+}
+ .btn-blue__bgc {
+  border-width: 1px;
+  border-color: $btn-blue;
+  color: $btn-blue;
+   &:hover {
+     background-color: $btn-blue;
+     color: white;
+   }
+}
+
+.block-list {
+  & li {
+    margin-bottom: 30px;
+    & .fa-check {
+      color: $btn-green;
+      margin-right: 8px;
+    }
+  }
+}
+
+/* Media Queries - Small screen / tablet  760px*/
+@media screen and (min-width: $screen-sm-min) {
+  .switcher {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    flex-direction: row;
+  }
+  .switcher-block {
+    flex: 0 1 40%;
+  }
+
+  .second-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    text-align: center;
+    flex: 0 1 60%;
+  }
+
+  .first-block {
+    & h2 {
+      padding-right: 40%;
+      font-size: 42px;
+    }
+  }
+
+    [class*='switcher-block__'] {
+    width: 340px;
+    & h4 {
+      padding: 0 23%;
+    }
+  }
+
+  .switcher-block__starter {
+    margin-top: 0;
+  }
+
+  .switcher-block__pro {
+    margin-left: -17px;
+  }
+}
+

@@ -1,0 +1,8 @@
+const express   = require('express'),
+    router      = express.Router({mergeParams: true});
+
+module.exports.isLoggedIn = (req, res, next) =>{
+        if (req.isAuthenticated()) return next();
+        req.flash('error', 'You need to be logged in to do that!');
+        res.redirect('/login');
+    };
