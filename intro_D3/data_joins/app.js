@@ -1,4 +1,4 @@
-const quotes = [
+let quotes = [
     {
         quote: "I see dead people.",
         movie: "The Sixth Sense",
@@ -26,3 +26,19 @@ const quotes = [
         rating: "G"
     }
 ];
+
+let newQuotes = [
+    {
+        quote: "Houston, we have a problem.",
+        movie: "Apollo 13",
+        year: 1995,
+        rating: "PG-13"
+    }, {
+        quote: "Gentlemen, you can't fight in here! This is the war room!",
+        movie: "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+        year: 1964,
+        rating: "PG"
+    }
+];
+
+

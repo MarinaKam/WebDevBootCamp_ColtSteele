@@ -1,44 +1,23 @@
+document.addEventListener('scroll', () => {
+    //scroll top
+    if(document.scrollingElement.scrollTop > 20) {
+        d3.select('.header-nav').classed('active', true);
+    } else {
+        d3.select('.header-nav').classed('active', false);
+    }
+    (document.scrollingElement.scrollTop >= 450) ? d3.select('.top-btn').classed('top-active', true) : d3.select('.top-btn').classed('top-active', false);
+
+    $('.top-active').on('click', (e) => {
+        e.stopImmediatePropagation();
+        $("html, body").animate({ scrollTop: $('header').offset().top }, 1000);
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
-    document.addEventListener('scroll', function(e) {
-        //scroll top
-        if(document.scrollingElement.scrollTop > 20) {
-            d3.select('.header-nav').classed('active', true);
-        } else {
-            d3.select('.header-nav').classed('active', false);
-        }
-        (document.scrollingElement.scrollTop >= 450) ? d3.select('.top-btn').classed('top-active', true) : d3.select('.top-btn').classed('top-active', false);
 
-        d3.select('.top-btn').on('click', () => scrollTo(document.body, 0, 1250));
-
-        function scrollTo(element, to, duration) {
-            let start = element.scrollTop,
-                change = to - start,
-                currentTime = 0,
-                increment = 20;
-
-            let animateScroll = function(){
-                currentTime += increment;
-                let val = Math.easeInOutQuad(currentTime, start, change, duration);
-                element.scrollTop = val;
-                if(currentTime < duration) {
-                    setTimeout(animateScroll, increment);
-                }
-            };
-            animateScroll();
-        }
-
-//t = current time
-//b = start value
-//c = change in value
-//d = duration
-        Math.easeInOutQuad = function (t, b, c, d) {
-            t /= d/2;
-            if (t < 1) return c/2*t*t + b;
-            t--;
-            return -c/2 * (t*(t-2) - 1) + b;
-        };
-
-
+    $('a[href*=\\#]').on('click', function(event){
+        event.preventDefault();
+        $('html,body').animate({scrollTop: $(this.hash).offset().top - 50}, 800);
     });
 
     d3.select('body').append('div')
@@ -53,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     d3.select('.alert-msg').on('click', () => d3.select('.alert').remove());
 
     d3.selectAll('a[href="#"]').on('click', () => {
-        // d3.event.preventDefault();
+        d3.event.preventDefault();
     });
     //Hidden Menu
     d3.select('.open-btn').on('click', () => {
@@ -156,7 +135,5 @@ document.addEventListener('DOMContentLoaded', () => {
         d3.select('.switcher-block__pro').classed('switcher-active', true);
         d3.select('.switcher-block__starter').classed('switcher-active', false);
     }
-
-
 
 });

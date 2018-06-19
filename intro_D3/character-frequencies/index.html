@@ -5,19 +5,26 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Frequency Count</title>
 </head>
 <body>
+<header>
+    <h1>Letter Analyzer</h1>
+    <form>
+        <input type="text">
+        <button type="submit" class="submBtn">Count the Letters!</button>
+        <button id="reset" type="button">Reset</button>
+    </form>
+</header>
 <section>
-    <h1>Movie quotes.</h1>
-    <ul id="quotes">
-    </ul>
-    <button id="remove">Remove quotes from R-rated movies</button>
-    <button id="add">Add more quotes</button>
+    <h2 id="phrase"></h2>
+    <h4 id="count"></h4>
+    <div id="letters"></div>
 </section>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="app.js"></script>
-<script src="script.js"></script>
+
 </body>
 </html>

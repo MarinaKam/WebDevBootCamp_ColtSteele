@@ -59,6 +59,8 @@ Hidden Nav
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  //-ms-overflow-style: none;
+  //overflow: -moz-scrollbars-none;
   & a:not(.btn):not(.cloth-btn) {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -116,7 +118,7 @@ Hidden Nav
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  height: 47%;
+  height: 30%;
   padding: 40px 0;
 }
 
